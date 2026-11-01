@@ -6,13 +6,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.aalplotnikov</groupId>
-    <artifactId>aston-module-5</artifactId>
+    <artifactId>aston-module-7</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
         <module>user-service</module>
         <module>notification-service</module>
+        <module>discovery-server</module>
+        <module>api-gateway</module>
     </modules>
 
 </project>
