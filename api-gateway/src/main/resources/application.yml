@@ -15,12 +15,20 @@ spring:
                 - Path=/api/users/**
               filters:
                 - StripPrefix=2
+                - name: CircuitBreaker
+                  args:
+                    id: userServiceCB
+                    fallbackUri: forward:/fallback/users
             - id: notification-service-route
               uri: lb://NOTIFICATION-SERVICE
               predicates:
                 - Path=/api/notifications/**
               filters:
                 - StripPrefix=2
+                - name: CircuitBreaker
+                  args:
+                    id: notificationServiceCB
+                    fallbackUri: forward:/fallback/notifications
 
 eureka:
   client:
